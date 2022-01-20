@@ -1,0 +1,108 @@
+body {
+    font-family: monospace;
+   font-weight: 800;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.c-black {
+    color: #000000;
+}
+
+.bg-dark-blue {
+    background-color: #0A285F;
+}
+
+.c-dark-blue {
+    color: #0A285F;
+}
+
+.bg-light-blue {
+    background-color: #0075BE;
+}
+
+.c-light-blue {
+    color: #0075BE;
+}
+
+.bg-yellow {
+    background-color: #FFCC00;
+}
+
+.c-yellow {
+    color: #FFCC00;
+}
+
+.c-yellow:focus, .c-yellow:hover {
+    color: #FFF !important;
+}
+
+.fs-7 {
+    font-size: 0.8rem;
+}
+
+header{
+    background-color: #FFF;
+}
+
+footer{
+    border-top: solid 5px rgb(248, 57, 57);
+    padding: 3em;
+    background: #0075BE;
+    margin-top: 3em;
+}
+
+.circle-btn{
+    border-radius: 50%;
+}
+
+
+.nav-link{
+    color: #0075BE;
+}
+
+.nav-item.active > .nav-link, .nav-link:hover{
+    color: rgb(248, 57, 57) !important;
+}
+
+.dropdown-menu{
+    background: #0075BE;
+}
+.dropdown-menu .dropdown-item{
+    color: #fff;
+}
+.dropdown-menu .dropdown-item:hover,.dropdown-menu > li:hover{
+    background-color: rgba(255, 255, 255, 0.104);
+}
+
+.carousel-inner {
+    height: 400px;
+    border-bottom: solid 5px rgb(248, 57, 57);
+}
+
+.carousel-item {
+    height: 100%;
+    min-height: 400;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.dropdown-sub::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid transparent;
+    border-right: 0.3em solid ;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.bg-yellow-pokemon{
+    background-image: url(../images/yellow-pattern.png);
+}
