@@ -17,8 +17,8 @@ jobs:
         run: npm install
       # - name: Run Lint
       #   run: yarn run lint
-      - name: Build
-        run: npm run build
+      # - name: Build
+        # run: npm run build
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -26,4 +26,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
       - name: Deploy to S3
-        run: yarn run deploy
+        run: npm run deploy
