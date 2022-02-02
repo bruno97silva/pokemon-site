@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "syncS3" : "aws s3 sync ./ s3://universodascartas.com.br --region sa-east-1 --profile universodascartas",
-    "clearCache" : "aws cloudfront create-invalidation --distribution-id E7O9VTAJJJDNZ --profile universodascartas --paths \"/index.html\" \"/images/*\" \"/css/*\" \"/js/*\"",
+    "clearCache" : "export AWS_PAGER=\"\"; aws cloudfront create-invalidation --distribution-id E7O9VTAJJJDNZ --profile universodascartas --paths \"/index.html\" \"/images/*\" \"/css/*\" \"/js/*\"",
     "deploy" : "npm run syncS3 && npm run clearCache"
   },
   "author": "",
