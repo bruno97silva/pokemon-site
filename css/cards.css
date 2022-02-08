@@ -8,8 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99999;
 }
-
+.carousel-indicators{
+  z-index: 9999;
+}
 .card-item{
   cursor: pointer;
 }
