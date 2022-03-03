@@ -1,5 +1,4 @@
 @import url('http://fonts.cdnfonts.com/css/gotham-rounded');
-
 body {
     font-family: 'Gotham Rounded', sans-serif;
 }
@@ -36,7 +35,8 @@ body {
     color: #FFCC00;
 }
 
-.c-yellow:focus, .c-yellow:hover {
+.c-yellow:focus,
+.c-yellow:hover {
     color: #FFF !important;
 }
 
@@ -44,12 +44,13 @@ body {
     font-size: 0.8rem;
 }
 
-header{
-    background-image: url(../images/pattern-white.png);
-    background-size: 1000px;
+header,
+#sidebar {
+    background-image: url(../images/pattern-white.png) !important;
+    background-size: 1000px !important;
 }
 
-footer{
+footer {
     border-top: solid 5px #0075BE;
     padding: 3em;
     /* background: #0075BE; */
@@ -57,34 +58,39 @@ footer{
     background-size: cover;
     margin-top: 3em;
 }
-.glowMewtwo{
+
+.glowMewtwo {
     -webkit-filter: drop-shadow(12px 12px 7px rgba(90, 0, 102, 0.5));
     filter: drop-shadow(12px 12px 7px rgba(90, 0, 102, 0.5));
 }
 
-.bg-light{
+.bg-light {
     background: rgba(255, 255, 255, 0.693) !important;
 }
-.circle-btn{
+
+.circle-btn {
     border-radius: 50%;
 }
 
-
-.nav-link{
+.nav-link {
     color: #0075BE;
 }
 
-.nav-item.active > .nav-link, .nav-link:hover{
+.nav-item.active>.nav-link,
+.nav-link:hover {
     color: rgb(248, 57, 57) !important;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background: #0075BE;
 }
-.dropdown-menu .dropdown-item{
+
+.dropdown-menu .dropdown-item {
     color: #fff;
 }
-.dropdown-menu .dropdown-item:hover,.dropdown-menu > li:hover{
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu>li:hover {
     background-color: #0A285F;
 }
 
@@ -101,7 +107,7 @@ footer{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 
 .dropdown-sub::after {
     display: inline-block;
@@ -109,25 +115,169 @@ footer{
     vertical-align: 0.255em;
     content: "";
     border-top: 0.3em solid transparent;
-    border-right: 0.3em solid ;
+    border-right: 0.3em solid;
     border-bottom: 0;
     border-left: 0.3em solid transparent;
 }
 
-.bg-yellow-pokemon{
+.bg-yellow-pokemon {
     background-image: url(../images/pokemon_pattern_bg_gold.png);
 }
 
-@media (max-width: 500px){
-    .shine{
+@media (max-width: 500px) {
+    .shine {
         max-width: 70%;
         margin: 0 auto;
         display: flex;
     }
 }
 
-
-.searchBar  {
+.searchBar {
     background-color: #fff;
     border-radius: 50px;
+}
+
+.login {
+    line-height: 1em;
+}
+
+.loginLabel {
+    display: inline-block;
+    margin-bottom: 0rem !important;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    perspective: 1500px;
+}
+
+#content {
+    width: 100vw;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    min-height: 100vh;
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left;
+    /* Set the transformed position of sidebar to center left side. */
+}
+
+#sidebar.active {
+    margin-left: -250px;
+    transform: rotateY(100deg);
+    /* Rotate sidebar vertically by 100 degrees. */
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    /* Reversing the behavior of the sidebar: 
+       it'll be rotated vertically and off canvas by default, 
+       collapsing in on toggle button click with removal of 
+       the vertical rotation.   */
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(100deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    /* Reversing the behavior of the bars: 
+       Removing the rotation from the first,
+       last bars and reappear the second bar on default state, 
+       and giving them a vertical margin */
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    color: #a2aab0;
+    transition: all 0.3s;
+    border-right: solid 3px #0075BE;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: rgb(248, 57, 57);
+    text-decoration: none;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #a2aab0;
+}
+
+a.dropdown-toggle,
+.list-unstyled.components a {
+    color: #a2aab0;
+}
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #0075BE;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
 }

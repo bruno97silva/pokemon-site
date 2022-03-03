@@ -9,130 +9,366 @@
     <link href="./css/fontawesome/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/dropdown_hack.css">
     <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/menu-principal.css">
     <link href="./css/main.css" rel="stylesheet">
     <link rel="shortcut icon" href="./images/favicon.ico">
+    <link href="/dist/css/pokemon-iconfont.css" rel="stylesheet" type="text/css" />
 
     <title>Pokémon</title>
 </head>
 
 <body class="bg-yellow-pokemon">
-    <main>
-        <header class="p-3">
-            <div class="container-fluid justify-content-between">
-                <div class="row">
-                    <div class="col-md-3 col-lg-2">
-                        <div>
-                            <a href="./">
-                                <img alt="Universo das Cartas" class="d-flex m-auto" src="./images/logo-2.png" height="60px">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-9 col-lg-8 mb-3 mb-lg-0">
-                        <form>
-                            <input type="search" class="form-control form-control-dark searchBar" placeholder="Buscar..."
-                                aria-label="Search">
-                        </form>
-                    </div>
-                    <div class="col-md-3 col-lg-2 justify-content-around">
-                        <div class="d-flex align-items-center">
-                            <div class="icon">
-                                <span class="fa-stack c-light-blue" style="vertical-align: top;">
-                                    <i class="far fa-circle fa-stack-2x"></i>
-                                    <i class="far fa-user fa-stack-1x"></i>
-                                </span>
-                            </div>
-                            <div class="login">
-                                <label class="fs-7" style="color: #a2aab0;">Faça Login</label><Br>
-                                <label class="fs-7 c-light-blue">ou Cadastre-se</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                      <a class="navbar-brand d-xm-block d-xl-none" href="#">Menu</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>   
-                            <li class="nav-item"><a class="nav-link" href="#"> Sobre </a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Cartas </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
-                                    <li><a class="dropdown-item dropdown-sub" href="#"> Dropdown item 2 </a>
-                                        <ul class="submenu dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                                            <li><a class="dropdown-item dropdown-sub" href="#">Submenu item 3 </a>
-                                                <ul class="submenu dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                                                    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 4 </a>
-                                </ul>
-                            </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-               
+    <div class="wrapper">
+        <nav id="sidebar" class="d-md-none">
+            <div class="sidebar-header">
+                <img alt="Universo das Cartas" class="d-flex m-auto" src="./images/logo-2.png" height="90px">
             </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <div class="overlay"></div>
+            <main>
+                <header id="header" class="p-3 header-novo">
+                    <div class="container-fluid justify-content-between">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-2">
+                                <div>
+                                    <a href="#">
+                                        <img alt="Universo das Cartas" class="d-flex m-auto" src="./images/logo-2.png" height="60px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-lg-8 mb-3 mb-lg-0">
+                                <form>
+                                    <input type="search" class="form-control form-control-dark searchBar" placeholder="Buscar..." aria-label="Search">
+                                </form>
+                            </div>
+                            <div class="col-12 mt-2 d-md-none"></div>
+                            <div class="col-3 d-md-none">
+                                <button type="button" id="sidebarCollapse" class="btn btn-outline-info">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="col-9 col-lg-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="icon">
+                                        <span class="fa-stack c-light-blue" style="vertical-align: top;">
+                                            <i class="far fa-circle fa-stack-2x"></i>
+                                            <i class="far fa-user fa-stack-1x"></i>
+                                        </span>
+                                    </div>
+                                    <div class="login">
+                                        <label class="fs-7 loginLabel" style="color: #a2aab0;">Faça Login</label>
+                                        <Br>
+                                        <label class="fs-7 c-light-blue loginLabel">ou Cadastre-se</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-conteudo">
+                            <nav id="container-menu-principal">
+                                <div class="navbar-collapse container nav-desktop d-flex">
+                                    <div class="col-12 ps-0 pe-0">
+
+                                        <div class="container">
+                                            <nav class="navbar navbar-expand-md p-0">
+                                                <div class="menu-principal" id="navbar-collapse">
+                                                    <ul class="navbar-nav d-flex align-items-stretch">
+                                                        <li class="categoria-item has-subitens menu-slide-down nav-item">
+                                                            <span class="menu-text">
+                                                                <div class="nav-hamburguer-categoria">
+                                                                    <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                </div>
+                                                Todas as Categorias
+                                                <i class="fa fa-caret-down menu-anchor-icon"></i>
+                                                </span>
+                                                <div class="wrapper-itens-menu">
+                                                    <ul class="hover-menu">
+                                                        <li class="lista-menu-itens" data-menuid="submenu_1">
+                                                            <a href="#">
+                                                                <div class="icon-menu">
+                                                                    <i class="fas fa-tint me-2"></i>
+                                                                </div>
+                                                                Água <i class="fa fa-caret-right menu-anchor-icon"></i>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="lista-menu-itens" data-menuid="submenu_2">
+                                                            <a href="#">
+                                                                <div class="icon-menu">
+                                                                    <i class="fas fa-fire me-2"></i>
+                                                                </div>
+                                                                Fogo <i class="fa fa-caret-right menu-anchor-icon"></i>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="lista-menu-itens" data-menuid="submenu_3">
+                                                            <a href="#">
+                                                                <div class="icon-menu">
+                                                                    <i class="fas fa-leaf me-2"></i>
+                                                                </div>
+                                                                Planta <i class="fa fa-caret-right menu-anchor-icon"></i>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="lista-menu-itens" data-menuid="submenu_4">
+                                                            <a href="#">
+                                                                <div class="icon-menu">
+                                                                    <i class="fas fa-bolt me-2"></i>
+                                                                </div>
+                                                                Elétrico <i class="fa fa-caret-right menu-anchor-icon"></i>
+                                                            </a>
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="menu-categoria-item" id="submenu_1" style="display: none;">
+                                                    <ul class="menus-categoria menu-subcategoria-none">
+                                                        <li class="show-subcategorias">
+                                                            <ul>
+                                                                <li class="titulo-subcategorias">
+                                                                    <ul class="menus-subcategoria p-0">
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Fusion
+                                                                                            Strike </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Brilliant
+                                                                                            Stars </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Celebrations
+                                                                                        </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                <div class="menu-categoria-item" id="submenu_2" style="display: none;">
+                                                    <ul class="menus-categoria menu-subcategoria-none">
+                                                        <li class="show-subcategorias">
+                                                            <ul>
+                                                                <li class="titulo-subcategorias">
+                                                                    <ul class="menus-subcategoria p-0">
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Fusion
+                                                                                            Strike </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Brilliant
+                                                                                            Stars </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Celebrations
+                                                                                        </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                <div class="menu-categoria-item" id="submenu_3" style="display: none;">
+                                                    <ul class="menus-categoria menu-subcategoria-none">
+                                                        <li class="show-subcategorias">
+                                                            <ul>
+                                                                <li class="titulo-subcategorias">
+                                                                    <ul class="menus-subcategoria p-0">
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Fusion
+                                                                                            Strike </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Brilliant
+                                                                                            Stars </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Celebrations
+                                                                                        </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                <div class="menu-categoria-item" id="submenu_4" style="display: none;">
+                                                    <ul class="menus-categoria menu-subcategoria-none">
+                                                        <li class="show-subcategorias">
+                                                            <ul>
+                                                                <li class="titulo-subcategorias">
+                                                                    <ul class="menus-subcategoria p-0">
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Fusion
+                                                                                            Strike </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Sword &
+                                                                                            Shield—Brilliant
+                                                                                            Stars </a>
+                                                                        </li>
+                                                                        <li class="sub-categoria ">
+                                                                            <a class="" href="#">
+                                                                                            Pokémon TCG: Celebrations
+                                                                                        </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                </li>
+
+                                                <li class="categoria-menu-item menu-slide-down nav-item">
+                                                    <a href="#">
+                                                                Todas as Cartas
+                                                            </a>
+                                                </li>
+
+                                                <li id="loja-menu-item" class="categoria-item categoria-menu-item menu-slide-down nav-item  ">
+                                                    <span class="menu-text">
+                                                                <a href="#" class="">
+                                                                    Raridades </a>
+                                                            </span>
+                                                </li>
+                                                <li id="loja-menu-item" class="categoria-item categoria-menu-item menu-slide-down nav-item  ">
+                                                    <span class="menu-text">
+                                                                <a href="#" class="">
+                                                                    Combos </a>
+                                                            </span>
+                                                </li>
+                                                <li class="categoria-menu-item menu-slide-down nav-item todas-ofertas">
+                                                    <a href="#">
+                                                                Cartas em Oferta
+                                                            </a>
+                                                </li>
+                                                </ul>
+                                        </div>
+                                        </nav>
+                                    </div>
+
+                                </div>
+                        </div>
+                        </nav>
+                    </div>
+
+        </div>
 
         </header>
         <div class="container-fluid p-0">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active" style="background-image: url('./images/carroucel/1.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                    <div class="carousel-item active" style="background-image: url('./images/carroucel/1.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('./images/carroucel/2.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                    <div class="carousel-item" style="background-image: url('./images/carroucel/2.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('./images/carroucel/3.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-item" style="background-image: url('./images/carroucel/3.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" style="background-image: url('./images/carroucel/4.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-item" style="background-image: url('./images/carroucel/4.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
             </div>
-            
+
 
         </div>
         <div class="container">
@@ -166,71 +402,69 @@
             </div>
         </div>
 
-    </main>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <section class="mb-4">
-                        <!-- Facebook -->
-                        <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"
-                           ><i class="fab fa-facebook-f"></i
-                          ></a>
-              
-                        <!-- Twitter -->
-                        <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"
-                           ><i class="fab fa-twitter"></i
-                          ></a>
-              
-                        <!-- Google -->
-                        <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"
-                           ><i class="fab fa-google"></i
-                          ></a>
-              
-                        <!-- Instagram -->
-                        <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"
-                           ><i class="fab fa-instagram"></i
-                          ></a>
-              
-                        <!-- Linkedin -->
-                        <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"
-                           ><i class="fab fa-linkedin-in"></i
-                          ></a>
-              
-                        <!-- Github -->
-                        <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"
-                           ><i class="fab fa-github"></i
-                          ></a>
-                      </section>
-                </div>
-                <div class="col-12 col-md-4 text-center">
-                    <img class="glowMewtwo" src="./images/mewtwo.png" width="60%" alt="">
+        </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <section class="mb-4">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"><i
+                                        class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"><i
+                                        class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"><i
+                                        class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"><i
+                                        class="fab fa-instagram"></i></a>
+
+                            <!-- Linkedin -->
+                            <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"><i
+                                        class="fab fa-linkedin-in"></i></a>
+
+                            <!-- Github -->
+                            <a class="btn btn-outline-light btn-floating circle-btn m-1" href="#!" role="button"><i
+                                        class="fab fa-github"></i></a>
+                        </section>
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img class="glowMewtwo" src="./images/mewtwo.png" width="60%" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 
-    <div id="bigCardContainer" class="bigCard-container col-12 hide">
-        <div id="card-scene" class="card-scene">
-            <div id="cardElement">
-                <span id="helper" class="hide"></span>
-                <div id="bigCard" class="card">
-                    <div class="card-face card-backing">
-                        <img src="./images/cards/back.jpg" width="100%">
-                    </div>
-                    <div class="card-face card-front">
-                        <img id="bigCardFront" src="./images/cards/1.jpg" width="100%">
+        <div id="bigCardContainer" class="bigCard-container col-12 hide">
+            <div id="card-scene" class="card-scene">
+                <div id="cardElement">
+                    <span id="helper" class="hide"></span>
+                    <div id="bigCard" class="card">
+                        <div class="card-face card-backing">
+                            <img src="./images/cards/back.jpg" width="100%">
+                        </div>
+                        <div class="card-face card-front">
+                            <img id="bigCardFront" src="./images/cards/1.jpg" width="100%">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./js/dropdown_hack.js"></script>
     <script src="./js/cards.js"></script>
+    <script src="./js/menu-principal.js"></script>
 </body>
 
 </html>
