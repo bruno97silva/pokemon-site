@@ -189,7 +189,7 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     /* Reversing the behavior of the sidebar: 
        it'll be rotated vertically and off canvas by default, 
        collapsing in on toggle button click with removal of 
@@ -286,4 +286,16 @@ a.dropdown-toggle,
     display: block;
     background: #0075BE;
     transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+@media (max-width: 991px) {
+    .float-sm-right {
+        float: right!important;
+    }
+}
+
+@media (min-width: 991px) {
+    .float-sm-right {
+        float: none!important;
+    }
 }
