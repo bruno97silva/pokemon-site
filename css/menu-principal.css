@@ -6208,65 +6208,6 @@ a.close.disabled {
     content: ""
 }
 
-.carousel-item {
-    position: relative;
-    display: none;
-    float: left;
-    width: 100%;
-    margin-right: -100%;
-    backface-visibility: hidden;
-    transition: transform .6s ease-in-out
-}
-
-@media (prefers-reduced-motion:reduce) {
-    .carousel-item {
-        transition: none
-    }
-}
-
-.carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
-    display: block
-}
-
-.active.carousel-item-right,
-.carousel-item-next:not(.carousel-item-left) {
-    transform: translateX(100%)
-}
-
-.active.carousel-item-left,
-.carousel-item-prev:not(.carousel-item-right) {
-    transform: translateX(-100%)
-}
-
-.carousel-fade .carousel-item {
-    opacity: 0;
-    transition-property: opacity;
-    transform: none
-}
-
-.carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right,
-.carousel-fade .carousel-item.active {
-    z-index: 1;
-    opacity: 1
-}
-
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0s .6s
-}
-
-@media (prefers-reduced-motion:reduce) {
-    .carousel-fade .active.carousel-item-left,
-    .carousel-fade .active.carousel-item-right {
-        transition: none
-    }
-}
-
 .carousel-control-next,
 .carousel-control-prev {
     position: absolute;
@@ -14194,10 +14135,6 @@ body.page-finalizacao .side-cart {
 
 .carousel-generico .carousel-control-prev {
     justify-content: flex-start
-}
-
-.carousel-generico .carousel-inner .carousel-item {
-    justify-content: center
 }
 
 .carousel-generico .carousel-inner .img-banner {
@@ -29242,9 +29179,6 @@ h2.ckt__column__titulo {
 .copyright ol {
     list-style-position: inside
 }
-.mb-carrossel-footer {
-    margin-bottom: 30px
-}
 .mb-footer-p {
     margin-bottom: .75rem
 }
@@ -29282,16 +29216,8 @@ h2.ckt__column__titulo {
     border: none;
     padding-top: 0
 }
-.page-catalogo .mb-carrossel-footer,
-.page-produto .mb-carrossel-footer {
-    display: none
-}
 .footer-bg {
     position: relative
-}
-.footer-bg .carousel-wrapper {
-    background-color: #fcfcfc;
-    padding-bottom: 20px
 }
 div#back-to-the-top {
     display: none;
@@ -30462,18 +30388,6 @@ div.g-recaptcha {
     text-transform: uppercase;
     padding-top: 34px
 }
-.section--last-viewed-prods .carousel-prods {
-    margin: 20px 0 0
-}
-.section--last-viewed-prods .carousel-prods .owl-stage--disabled {
-    width: 100%!important;
-    display: flex;
-    justify-content: center
-}
-.section--last-viewed-prods .carousel-prods .owl-next span,
-.section--last-viewed-prods .carousel-prods .owl-prev span {
-    top: 0!important
-}
 @media screen and (max-width:768px) {
     .filters-menu {
         display: none
@@ -30894,24 +30808,6 @@ div.g-recaptcha {
         margin: 0
     }
     
-    hr.mobile-carousel-separator {
-        margin-left: -15px;
-        margin-right: -15px;
-        margin-bottom: 0
-    }
-    
-    body.page-produto .wrapper-section-mobile .carousel-shelf .seen-title {
-        display: none
-    }
-    
-    body.page-produto .wrapper-section-mobile .carousel-shelf h2.title {
-        font-weight: 600;
-        text-align: center;
-        color: #8a8a8a;
-        font-size: 20px;
-        margin: 25px 0
-    }
-    
     .wrapper-white-bg {
         display: none
     }
@@ -31037,21 +30933,12 @@ fieldset.btn-buy-qtde {
     border-radius: 7px;
     box-sizing: border-box
 }
-.v-centered .carousel {
-    position: relative;
-    overflow: hidden;
-    margin-top: 5px
-}
 .v-centered {
     align-items: center;
     display: flex!important;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center
-}
-.carousel-nav .owl-nav .owl-next span.slider-picking,
-.carousel-nav .owl-nav .owl-prev span.slider-picking {
-    padding: 0
 }
 .page-familia .breadcrumb {
     background-color: transparent;
@@ -33170,9 +33057,6 @@ body.site-compreagora .custom-scrollbar::-webkit-scrollbar-thumb {
 .modo-grid .produto__selos-componente {
     top: 17px
 }
-.modo-grid .carousel-catalogo {
-    margin-top: 0
-}
 .modo-grid .msg-indisponivel {
     padding: 20px!important;
     min-height: 286px;
@@ -33411,22 +33295,6 @@ body.site-compreagora .custom-scrollbar::-webkit-scrollbar-thumb {
 }
 .swal2-modal .swal2-header .swal2-close:before:hover {
     opacity: .75!important
-}
-.carousel-nav .owl-dots .owl-dot {
-    width: 6px!important;
-    height: 6px!important;
-    background-color: #a2aab0;
-    opacity: 1;
-    vertical-align: middle
-}
-.carousel-nav .owl-dots .owl-dot.active,
-.carousel-nav .owl-dots .owl-dot:hover {
-    background: #fff!important;
-    width: 12px!important;
-    height: 12px!important;
-    border: 2px solid #a2aab0;
-    margin-top: 1px;
-    box-sizing: content-box
 }
 #vitrine-home .owl-carousel .owl-dots .owl-dot {
     width: 13px!important;
@@ -45139,10 +45007,6 @@ body.page-todasofertas .fique-olho-nessas-ofertas .area-fique-olho-nessas-oferta
     body.page-todasofertas .fique-olho-nessas-ofertas .carousel-control-next,
     body.page-todasofertas .fique-olho-nessas-ofertas .carousel-control-prev {
         display: none
-    }
-    
-    body.page-todasofertas .fique-olho-nessas-ofertas .carousel-item {
-        width: auto
     }
     
     body.page-todasofertas .fique-olho-nessas-ofertas .banner-shadow {

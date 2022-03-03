@@ -146,10 +146,14 @@ footer {
     margin-bottom: 0rem !important;
 }
 
+main {
+    width: 100vw;
+}
+
 .wrapper {
     display: flex;
     align-items: stretch;
-    perspective: 1500px;
+    /* perspective: 1500px; */
 }
 
 #content {
@@ -233,11 +237,13 @@ a[data-toggle="collapse"] {
 
 #sidebar .sidebar-header {
     padding: 20px;
+    background: #fff;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
+    background: #fff;
 }
 
 #sidebar ul p {
